@@ -1,0 +1,20 @@
+$tab: 768px;    //tab用のデザイン
+$pc: 1024px;    //pc用のデザイン
+
+@mixin tab {
+    @media (min-width: $tab) {
+        @content;
+    }
+}
+@mixin pc {
+    @media (min-width: $pc) {
+        @content;
+    }
+}
+
+@include tab {
+
+}
+@include pc {
+
+}

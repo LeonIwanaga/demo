@@ -1,0 +1,10 @@
+.p-search {
+    display: flex;
+    justify-content: flex-end;
+
+    &__input {
+        width: 250px;
+        height: 30px;
+        border-radius: 15px;
+    }
+}
