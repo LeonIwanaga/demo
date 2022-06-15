@@ -1,9 +1,5 @@
 .l-sidebar {
     width: 300px;
     height: 100vh;
-    background: $turquoise;
-    background: -webkit-linear-gradient(top left, $turquoise 0%, $prim 100%);
-    background: -moz-linear-gradient(top left, $turquoise 0%, $prim 100%);
-    background: -o-linear-gradient(top left, $turquoise 0%, $prim 100%);
-    background: linear-gradient(to bottom right, $turquoise 0%, $prim 100%);
+    background: $prim;
 }
