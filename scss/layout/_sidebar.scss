@@ -2,13 +2,17 @@
     position: fixed;
     width: 300px;
     height: 100vh;
-    background: $prim;
+    background: $turquoise;
+    background: -webkit-linear-gradient(top left, $turquoise 0%, #53e3a6 100%);
+    background: -moz-linear-gradient(top left, $turquoise 0%, #53e3a6 100%);
+    background: -o-linear-gradient(top left, $turquoise 0%, #53e3a6 100%);
+    background: linear-gradient(to bottom right, $turquoise 0%, #53e3a6 100%);
+    text-align: center;
 
     &__ttl {
-        text-align: center;
         height: 90px;
         line-height: 90px;
-        font-size: 3.6rem;
-        font-weight: 200;
+        font-size: 2.4rem;
+        font-weight: bold;
     }
 }

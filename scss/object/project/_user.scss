@@ -1,0 +1,20 @@
+.p-user {
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1.4rem;
+
+    &__name {
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    &__logout {
+        color: $black;
+        text-decoration: underline;
+    }
+}

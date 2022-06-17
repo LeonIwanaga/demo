@@ -30,6 +30,8 @@
             <h1 class="l-sidebar__ttl">
                 Home
             </h1>
+
+            <!-- サイドメニュー項目 -->
             <ul class="p-sidebar">
                 <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">一覧へ戻る</a></li>
                 <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">管理者登録</a></li>
@@ -38,7 +40,17 @@
                 <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">グラフ</a></li>
                 <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">操作ログ</a></li>
             </ul>
+
+            <!-- ユーザー名表示 -->
+            <div class="p-user">
+                <span class="p-user__name">noeforger@gmail.com</span> 
+                <a href="" class="p-user__logout">Logout</a>
+            </div>
         </nav>
+
+<!-- サイドコンテンツ -->
+<!-- ---------------------------------------------------------------------------------- -->
+<!-- メインコンテンツ -->
 
         <!-- メインコンテンツ -->
         <div class="l-main">
@@ -49,7 +61,9 @@
                     <h2 class="p-header__ttl">
                         Member Admin
                     </h2>
-                    <a href="" class="c-addbtn">
+
+                    <!-- js-modal-open クリックでモーダルウィンドウが開く -->
+                    <a href="#" class="c-addbtn js-modal-open">
                         <i class="fa-solid fa-plus"></i><span class="p-header__txt">Add Member</span>
                     </a>
                 </div>
@@ -59,8 +73,10 @@
                     <input class="p-search__input" type="search" name="search" placeholder="Search">
                 </form>
 
+                <!-- 社員一覧 -->
                 <div class="p-admin">
 
+                    <!-- 社員一覧の項目 -->
                     <ul class="p-admin__head">
                         <li>User</li>
                         <li>Name</li>
@@ -182,95 +198,67 @@
                         </ul>
                     </a>
                     <hr class="p-admin--bar">
-
-                    <a href="" class="p-admin__body">
-                        <ul class="p-admin__body__item">
-                            <li class="p-admin__body__item__img">
-                                <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo">
-                            </li>
-                            <li>Noe Forger</li>
-                            <li>spy</li>
-                            <li>2000-03-25</li>
-                            <li>noeforger@gmail.com</li>
-                            <li>012-3456-7890</li>
-                        </ul>
-                    </a>
-                    <hr class="p-admin--bar">
-
-                    <a href="" class="p-admin__body">
-                        <ul class="p-admin__body__item">
-                            <li class="p-admin__body__item__img">
-                                <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo">
-                            </li>
-                            <li>Noe Forger</li>
-                            <li>spy</li>
-                            <li>2000-03-25</li>
-                            <li>noeforger@gmail.com</li>
-                            <li>012-3456-7890</li>
-                        </ul>
-                    </a>
-                    <hr class="p-admin--bar">
-
-                    <a href="" class="p-admin__body">
-                        <ul class="p-admin__body__item">
-                            <li class="p-admin__body__item__img">
-                                <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo">
-                            </li>
-                            <li>Noe Forger</li>
-                            <li>spy</li>
-                            <li>2000-03-25</li>
-                            <li>noeforger@gmail.com</li>
-                            <li>012-3456-7890</li>
-                        </ul>
-                    </a>
-                    <hr class="p-admin--bar">
-
-                    <a href="" class="p-admin__body">
-                        <ul class="p-admin__body__item">
-                            <li class="p-admin__body__item__img">
-                                <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo">
-                            </li>
-                            <li>Noe Forger</li>
-                            <li>spy</li>
-                            <li>2000-03-25</li>
-                            <li>noeforger@gmail.com</li>
-                            <li>012-3456-7890</li>
-                        </ul>
-                    </a>
-                    <hr class="p-admin--bar">
-
-                    <a href="" class="p-admin__body">
-                        <ul class="p-admin__body__item">
-                            <li class="p-admin__body__item__img">
-                                <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo">
-                            </li>
-                            <li>Noe Forger</li>
-                            <li>spy</li>
-                            <li>2000-03-25</li>
-                            <li>noeforger@gmail.com</li>
-                            <li>012-3456-7890</li>
-                        </ul>
-                    </a>
-                    <hr class="p-admin--bar">
-
-                    <a href="" class="p-admin__body">
-                        <ul class="p-admin__body__item">
-                            <li class="p-admin__body__item__img">
-                                <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo">
-                            </li>
-                            <li>Noe Forger</li>
-                            <li>spy</li>
-                            <li>2000-03-25</li>
-                            <li>noeforger@gmail.com</li>
-                            <li>012-3456-7890</li>
-                        </ul>
-                    </a>
-                    <hr class="p-admin--bar">
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- モーダルウィンドウ -->
+    <div class="p-modal js-modal">
+        <div class="p-modal__bg js-modal-close"></div>
+        <form action="" class="p-add">
+            <div class="p-add__inner">
+                <div class="p-add__inner__ttl">Add</div>
+                <div class="p-add__inner__list">
+                    <label for="" class="p-add__inner__list__center">画像アップロード</label>
+                    <input type="file" name="画像" id="">
+                </div>
+                <div class="p-add__inner__list">
+                    <label for="">名前</label>
+                    <input type="text">
+                </div>
+                <div class="p-add__inner__list">
+                    <label for="">フリガナ</label>
+                    <input type="text">
+                </div>
+                <div class="p-add__inner__list">
+                    <label for="">性別</label>
+                    <select name="gender">
+                        <option value="">選択してください</option>
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                    </select>
+                </div>
+                <div class="p-add__inner__list">
+                    <label for="">部署</label>
+                    <select name="dept">
+                        <option value="">選択してください</option>
+                        <option value="営業">営業部</option>
+                        <option value="スパイ">スパイ</option>
+                        <option value="調査兵団">調査兵団</option>
+                    </select>
+                </div>
+                <div class="p-add__inner__list">
+                    <label for="">生年月日</label>
+                    <input type="date" min="1900-01-01">
+                </div>
+                <div class="p-add__inner__list">
+                    <label for="">メールアドレス</label>
+                    <input type="text">
+                </div>
+                <div class="p-add__inner__list">
+                    <label for="">電話番号</label>
+                    <input type="text" placeholder="01234567890">
+                </div>
+                <div class="p-add__inner__list">
+                    <label for="">住所</label>
+                    <input type="text">
+                </div>
+
+                <input type="button" value="追加">
+            </div>
+        </form>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
