@@ -1,0 +1,17 @@
+.c-delete {
+    display: block;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    line-height: 50px;
+    font-size: 1.4rem;
+    color: $black;
+    background-color: $pink;
+
+    &:hover {
+        color: $black;
+        font-weight: bold;
+        background-color: $red;
+    }
+}

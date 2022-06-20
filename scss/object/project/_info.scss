@@ -1,0 +1,38 @@
+.p-info {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+
+    &__left {
+        width: 200px;
+        margin-right: 40px;
+
+        &__img {
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        margin-left: 40px;
+
+        &__inner {
+            font-family: 'Noto Sans JP', sans-serif;
+
+            &__tag {
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+
+            &__txt {
+                font-size: 1.8rem;
+                font-weight: 300;
+            }
+        }
+    }
+}

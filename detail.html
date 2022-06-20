@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>詳細画面</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="l-container">
+
+        <!-- サイドメニュー -->
+        <nav class="l-sidebar">
+            <h1 class="l-sidebar__ttl">
+                Detail
+            </h1>
+
+            <!-- サイドメニュー項目 -->
+            <ul class="p-sidebar">
+                <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">一覧へ戻る</a></li>
+                <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">管理者登録</a></li>
+                <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">グラフ</a></li>
+                <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">操作ログ</a></li>
+            </ul>
+
+            <!-- ユーザー名表示 -->
+            <div class="p-user">
+                <span class="p-user__name">noeforger@gmail.com</span> 
+                <a href="" class="p-user__logout">Logout</a>
+            </div>
+        </nav>
+
+<!-- サイドコンテンツ -->
+<!-- ---------------------------------------------------------------------------------- -->
+<!-- メインコンテンツ -->
+
+        <!-- メインコンテンツ -->
+        <div class="l-main">
+            <div class="l-main__container">
+
+                <!-- メインコンテンツのヘッダー -->
+                <div class="p-header">
+                    <h2 class="p-header__ttl">
+                        Member Admin
+                    </h2>
+
+                    <!-- js-modal-open クリックでモーダルウィンドウが開く -->
+                    <a href="#" class="c-addbtn js-modal-open">
+                        <i class="fa-solid fa-pen-to-square"></i><span class="p-header__txt">Edit</span>
+                    </a>
+                </div>
+
+                <div class="p-detail">
+                    <div class="p-info">
+                        <div class="p-info__left">
+                            <img src="images/azarashi.png" alt="" class="p-info__left__img">
+                        </div>
+                        <div class="p-info__right">
+                            <div class="p-info__right__inner">
+                                <p class="p-info__right__inner__tag">
+                                    名前
+                                </p>
+                                <p class="p-info__right__inner__txt">
+                                    岩永礼恩
+                                </p>
+                            </div>
+                            <div class="p-info__inner">
+                                <p class="p-info__right__inner__tag">
+                                    性別
+                                </p>
+                                <p class="p-info__right__inner__txt">
+                                    男
+                                </p>
+                            </div>
+                            <div class="p-info__inner">
+                                <p class="p-info__right__inner__tag">
+                                    部署
+                                </p>
+                                <p class="p-info__right__inner__txt">
+                                    spy
+                                </p>
+                            </div>
+                            <div class="p-info__inner">
+                                <p class="p-info__right__inner__tag">
+                                    生年月日
+                                </p>
+                                <p class="p-info__right__inner__txt">
+                                    2000-03-25
+                                </p>
+                            </div>
+                            <div class="p-info__inner">
+                                <p class="p-info__right__inner__tag">
+                                    メールアドレス
+                                </p>
+                                <p class="p-info__right__inner__txt">
+                                    noeforger@gmail.com
+                                </p>
+                            </div>
+                            <div class="p-info__inner">
+                                <p class="p-info__right__inner__tag">
+                                    電話番号
+                                </p>
+                                <p class="p-info__right__inner__txt">
+                                    01234567890
+                                </p>
+                            </div>
+                            <div class="p-info__inner">
+                                <p class="p-info__right__inner__tag">
+                                    住所
+                                </p>
+                                <p class="p-info__right__inner__txt">
+                                    東京都台東区東上野6丁目2-1MPR東上野ビル10階
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="" class="c-delete p-detail__btn">
+                        削除
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダルウィンドウ -->
+    <div class="p-modal js-modal">
+        <div class="p-modal__bg js-modal-close"></div>
+        <form action="" class="p-add">
+            <div class="p-add__inner">
+                <div class="p-add__inner__ttl">Edit</div>
+                <div class="p-add__inner__list">
+                    <label for="" class="p-add__inner__list">画像アップロード</label>
+                    <input type="file" name="画像" id="">
+                </div>
+                <div class="p-add__inner__list">
+                    <label for="">名前</label>
+                    <input type="text">
+                </div>
+                <div class="p-add__inner__list">
+                    <label for="">性別</label>
+                    <select name="gender">
+                        <option value="">選択してください</option>
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                    </select>
+                </div>
+                <div class="p-add__inner__list">
+                    <label for="">部署</label>
+                    <select name="dept">
+                        <option value="">選択してください</option>
+                        <option value="営業">営業部</option>
+                        <option value="スパイ">スパイ</option>
+                        <option value="調査兵団">調査兵団</option>
+                    </select>
+                </div>
+                <div class="p-add__inner__list">
+                    <label for="">生年月日</label>
+                    <input type="date" min="1900-01-01">
+                </div>
+                <div class="p-add__inner__list">
+                    <label for="">メールアドレス</label>
+                    <input type="text">
+                </div>
+                <div class="p-add__inner__list">
+                    <label for="">電話番号</label>
+                    <input type="text">
+                </div>
+                <div class="p-add__inner__list">
+                    <label for="">住所</label>
+                    <textarea name="adress"></textarea>
+                </div>
+
+                <div class="p-add__inner__btns">
+                    <a href="#" class="p-add__inner__btns--back c-btns js-modal-close">戻る</a>
+                    <a href="" class="p-add__inner__btns--add c-btns" >編集</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -27,10 +27,7 @@
             flex-direction: column;
             margin-bottom: 25px;
             font-family: 'Noto Sans JP', sans-serif;
-
-            &__center {
-                text-align: center;
-            }
+            font-weight: bold;
 
             & label {
                 font-size: 1.2rem;
@@ -41,12 +38,42 @@
                 height: 25px;
                 font-size: 1.2rem;
                 border-radius: 4px;
+
+                &::placeholder {
+                    font-weight: 100;
+                }
             }
 
             & select {
                 height: 25px;
                 font-size: 1.2rem;
                 border-radius: 4px;
+                font-weight: 100;
+            }
+
+            & textarea {
+                resize: vertical;
+                font-size: 1.2rem;
+                border-radius: 4px;
+
+                &::placeholder {
+                    font-weight: 100;
+                }
+            }
+        }
+
+        &__btns {
+            display: block;
+            width: 100%;
+            margin-top: 40px;
+
+            &--back {
+                border: $prim solid 2px;
+                margin-bottom: 15px;
+            }
+
+            &--add {
+                background-color: $prim;
             }
         }
     }

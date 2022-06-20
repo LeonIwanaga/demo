@@ -1,0 +1,15 @@
+.p-detail {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 100px);
+    padding: 30px;
+    background-color: $cwhite;
+    border-radius: 15px;
+
+    &__btn {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

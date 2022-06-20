@@ -73,20 +73,57 @@
                     <input class="p-search__input" type="search" name="search" placeholder="Search">
                 </form>
 
+                <!-- 社員一覧の項目 -->
+                <ul class="p-admin__head">
+                    <li>User</li>
+                    <li>Name</li>
+                    <li>Dept</li>
+                    <li>Birth</li>
+                    <li>Email</li>
+                    <li>Number</li>
+                </ul>
+
                 <!-- 社員一覧 -->
                 <div class="p-admin">
-
-                    <!-- 社員一覧の項目 -->
-                    <ul class="p-admin__head">
-                        <li>User</li>
-                        <li>Name</li>
-                        <li>Dept</li>
-                        <li>Birth</li>
-                        <li>Email</li>
-                        <li>Number</li>
-                    </ul>
+                    <a href="" class="p-admin__body">
+                        <ul class="p-admin__body__item">
+                            <li class="p-admin__body__item__img">
+                                <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo">
+                            </li>
+                            <li>Noe Forger</li>
+                            <li>spy</li>
+                            <li>2000-03-25</li>
+                            <li>noeforger@gmail.com</li>
+                            <li>012-3456-7890</li>
+                        </ul>
+                    </a>
                     <hr class="p-admin--bar">
-
+                    <a href="" class="p-admin__body">
+                        <ul class="p-admin__body__item">
+                            <li class="p-admin__body__item__img">
+                                <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo">
+                            </li>
+                            <li>Noe Forger</li>
+                            <li>spy</li>
+                            <li>2000-03-25</li>
+                            <li>noeforger@gmail.com</li>
+                            <li>012-3456-7890</li>
+                        </ul>
+                    </a>
+                    <hr class="p-admin--bar">
+                    <a href="" class="p-admin__body">
+                        <ul class="p-admin__body__item">
+                            <li class="p-admin__body__item__img">
+                                <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo">
+                            </li>
+                            <li>Noe Forger</li>
+                            <li>spy</li>
+                            <li>2000-03-25</li>
+                            <li>noeforger@gmail.com</li>
+                            <li>012-3456-7890</li>
+                        </ul>
+                    </a>
+                    <hr class="p-admin--bar">
                     <a href="" class="p-admin__body">
                         <ul class="p-admin__body__item">
                             <li class="p-admin__body__item__img">
@@ -210,16 +247,12 @@
             <div class="p-add__inner">
                 <div class="p-add__inner__ttl">Add</div>
                 <div class="p-add__inner__list">
-                    <label for="" class="p-add__inner__list__center">画像アップロード</label>
+                    <label for="" class="p-add__inner__list">画像アップロード</label>
                     <input type="file" name="画像" id="">
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">名前</label>
-                    <input type="text">
-                </div>
-                <div class="p-add__inner__list">
-                    <label for="">フリガナ</label>
-                    <input type="text">
+                    <input type="text" placeholder="岩永礼恩">
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">性別</label>
@@ -244,7 +277,7 @@
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">メールアドレス</label>
-                    <input type="text">
+                    <input type="text" placeholder="noeforger@gmail.com">
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">電話番号</label>
@@ -252,10 +285,13 @@
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">住所</label>
-                    <input type="text">
+                    <textarea name="adress" placeholder="東京都台東区東上野６丁目２−１MPR東上野ビル１０階"></textarea>
                 </div>
 
-                <input type="button" value="追加">
+                <div class="p-add__inner__btns">
+                    <a href="#" class="p-add__inner__btns--back c-btns js-modal-close">戻る</a>
+                    <a href="" class="p-add__inner__btns--add c-btns" >追加</a>
+                </div>
             </div>
         </form>
     </div>

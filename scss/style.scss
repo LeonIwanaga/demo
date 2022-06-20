@@ -10,6 +10,8 @@
 //object
 //component
 @import "object/component/addbtn";
+@import "object/component/btns";
+@import "object/component/delete";
 
 //copy
 
@@ -17,7 +19,9 @@
 //project
 @import "object/project/add";
 @import "object/project/admin";
+@import "object/project/detail";
 @import "object/project/header";
+@import "object/project/info";
 @import "object/project/login";
 @import "object/project/modal";
 @import "object/project/search";
