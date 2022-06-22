@@ -16,7 +16,7 @@
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -27,22 +27,19 @@
 
         <!-- サイドメニュー -->
         <nav class="l-sidebar">
-            <h1 class="l-sidebar__ttl">
-                Detail
-            </h1>
 
             <!-- サイドメニュー項目 -->
             <ul class="p-sidebar">
-                <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">一覧へ戻る</a></li>
-                <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">管理者登録</a></li>
-                <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">グラフ</a></li>
-                <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">操作ログ</a></li>
+                <li class="p-sidebar__list"><a href="/emps" class="p-sidebar__list__a">HOME</a></li>
+                <li class="p-sidebar__list"><a href="/register" class="p-sidebar__list__a">REGISTER</a></li>
+                <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">GRAPH</a></li>
+                <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">LOG</a></li>
             </ul>
 
             <!-- ユーザー名表示 -->
             <div class="p-user">
-                <span class="p-user__name">noeforger@gmail.com</span> 
-                <a href="" class="p-user__logout">Logout</a>
+                <span class="p-user__name" th:text="${session.admin.username}"></span> 
+                <a href="/logout" class="p-user__logout">Logout</a>
             </div>
         </nav>
 
@@ -57,7 +54,7 @@
                 <!-- メインコンテンツのヘッダー -->
                 <div class="p-header">
                     <h2 class="p-header__ttl">
-                        Member Admin
+                        Member Detail
                     </h2>
 
                     <!-- js-modal-open クリックでモーダルウィンドウが開く -->
@@ -69,69 +66,57 @@
                 <div class="p-detail">
                     <div class="p-info">
                         <div class="p-info__left">
-                            <img src="images/azarashi.png" alt="" class="p-info__left__img">
+                            <img src="images/azarashi.png" alt="" class="p-info__left__img" th:src="${emp.PhotosImagePathAtDetail}">
                         </div>
                         <div class="p-info__right">
                             <div class="p-info__right__inner">
                                 <p class="p-info__right__inner__tag">
-                                    名前
+                                    Name
                                 </p>
-                                <p class="p-info__right__inner__txt">
-                                    岩永礼恩
-                                </p>
+                                <p class="p-info__right__inner__txt" th:text="${emp.name}"></p>
                             </div>
                             <div class="p-info__inner">
                                 <p class="p-info__right__inner__tag">
-                                    性別
+                                    Gender
                                 </p>
-                                <p class="p-info__right__inner__txt">
-                                    男
-                                </p>
+                                <p class="p-info__right__inner__txt" th:text="${emp.gender}"></p>
                             </div>
                             <div class="p-info__inner">
                                 <p class="p-info__right__inner__tag">
-                                    部署
+                                    Department
                                 </p>
-                                <p class="p-info__right__inner__txt">
+                                <p class="p-info__right__inner__txt" th:text="${emp.dept}">
                                     spy
                                 </p>
                             </div>
                             <div class="p-info__inner">
                                 <p class="p-info__right__inner__tag">
-                                    生年月日
+                                    Birthday
                                 </p>
-                                <p class="p-info__right__inner__txt">
-                                    2000-03-25
-                                </p>
+                                <p class="p-info__right__inner__txt" th:text="${emp.birth}"></p>
                             </div>
                             <div class="p-info__inner">
                                 <p class="p-info__right__inner__tag">
-                                    メールアドレス
+                                    Email
                                 </p>
-                                <p class="p-info__right__inner__txt">
-                                    noeforger@gmail.com
-                                </p>
+                                <p class="p-info__right__inner__txt" th:text="${emp.email}"></p>
                             </div>
                             <div class="p-info__inner">
                                 <p class="p-info__right__inner__tag">
-                                    電話番号
+                                    Tel Number
                                 </p>
-                                <p class="p-info__right__inner__txt">
-                                    01234567890
-                                </p>
+                                <p class="p-info__right__inner__txt" th:text="${emp.tel}"></p>
                             </div>
                             <div class="p-info__inner">
                                 <p class="p-info__right__inner__tag">
-                                    住所
+                                    Address
                                 </p>
-                                <p class="p-info__right__inner__txt">
-                                    東京都台東区東上野6丁目2-1MPR東上野ビル10階
-                                </p>
+                                <p class="p-info__right__inner__txt" th:text="${emp.address}"></p>
                             </div>
                         </div>
                     </div>
                     <a href="" class="c-delete p-detail__btn">
-                        削除
+                        DELETE
                     </a>
                 </div>
             </div>
@@ -141,59 +126,59 @@
     <!-- モーダルウィンドウ -->
     <div class="p-modal js-modal">
         <div class="p-modal__bg js-modal-close"></div>
-        <form action="" class="p-add">
+        <form class="p-add" method="post" enctype="multipart/form-data" th:action="@{/UpdateEmp/{id}(id=${emp.id})}">
             <div class="p-add__inner">
                 <div class="p-add__inner__ttl">Edit</div>
                 <div class="p-add__inner__list">
-                    <label for="" class="p-add__inner__list">画像アップロード</label>
-                    <input type="file" name="画像" id="">
+                    <label for="" class="p-add__inner__list">Image</label>
+                    <input type="file" name="img" id="imgInp">
+                    <img id="blah" src="#" alt="your image" th:src="${emp.PhotosImagePathAtDetail}"/>
                 </div>
                 <div class="p-add__inner__list">
-                    <label for="">名前</label>
-                    <input type="text">
+                    <label for="">Name</label>
+                    <input type="text" th:value="${emp.name}" name="name">
                 </div>
                 <div class="p-add__inner__list">
-                    <label for="">性別</label>
+                    <label for="">Gender</label>
                     <select name="gender">
-                        <option value="">選択してください</option>
-                        <option value="男">男</option>
-                        <option value="女">女</option>
+                        <option value="男" th:selected="${emp.gender} eq '男'">男</option>
+                        <option value="女" th:selected="${emp.gender} eq '女'">女</option>
                     </select>
                 </div>
                 <div class="p-add__inner__list">
-                    <label for="">部署</label>
+                    <label for="">Department</label>
                     <select name="dept">
-                        <option value="">選択してください</option>
-                        <option value="営業">営業部</option>
-                        <option value="スパイ">スパイ</option>
-                        <option value="調査兵団">調査兵団</option>
+                        <option value="営業" th:selected="${emp.dept} eq '営業部'">営業部</option>
+                        <option value="スパイ" th:selected="${emp.dept} eq 'スパイ'">スパイ</option>
+                        <option value="調査兵団" th:selected="${emp.dept} eq '調査兵団'">調査兵団</option>
                     </select>
                 </div>
                 <div class="p-add__inner__list">
-                    <label for="">生年月日</label>
-                    <input type="date" min="1900-01-01">
+                    <label for="">Birthday</label>
+                    <input type="date" name="birth" id="datefield" th:value="${emp.birth}" min="1900-01-01">
                 </div>
                 <div class="p-add__inner__list">
-                    <label for="">メールアドレス</label>
-                    <input type="text">
+                    <label for="">Email</label>
+                    <input type="text" name="email" id="" th:value="${emp.email}">
                 </div>
                 <div class="p-add__inner__list">
-                    <label for="">電話番号</label>
-                    <input type="text">
+                    <label for="">Tel Number</label>
+                    <input type="tel" name="tel" id="" th:value="${emp.tel}">
                 </div>
                 <div class="p-add__inner__list">
-                    <label for="">住所</label>
-                    <textarea name="adress"></textarea>
+                    <label for="">Address</label>
+                    <input name="address" th:value="${emp.address}">
                 </div>
 
                 <div class="p-add__inner__btns">
-                    <a href="#" class="p-add__inner__btns--back c-btns js-modal-close">戻る</a>
-                    <a href="" class="p-add__inner__btns--add c-btns" >編集</a>
+                    <a href="#" class="p-add__inner__btns--back c-btns js-modal-close">Back</a>
+                    <!-- <a href="" class="p-add__inner__btns--add c-btns" >編集</a> -->
+                    <input class="p-add__inner__btns--add c-btns" type="submit" value="Confirm">
                 </div>
             </div>
         </form>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

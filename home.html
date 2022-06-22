@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>ホーム</title>
 
@@ -27,24 +27,21 @@
 
         <!-- サイドメニュー -->
         <nav class="l-sidebar">
-            <h1 class="l-sidebar__ttl">
-                Home
-            </h1>
 
             <!-- サイドメニュー項目 -->
             <ul class="p-sidebar">
-                <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">一覧へ戻る</a></li>
-                <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">管理者登録</a></li>
-                <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">インポート</a></li>
-                <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">エクスポート</a></li>
-                <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">グラフ</a></li>
-                <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">操作ログ</a></li>
+                <li class="p-sidebar__list"><a href="/home" class="p-sidebar__list__a">HOME</a></li>
+                <li class="p-sidebar__list"><a href="/register" class="p-sidebar__list__a">REGISTER</a></li>
+                <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">IMPORT</a></li>
+                <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">EXPORT</a></li>
+                <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">GRAPH</a></li>
+                <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">LOG</a></li>
             </ul>
 
             <!-- ユーザー名表示 -->
             <div class="p-user">
-                <span class="p-user__name">noeforger@gmail.com</span> 
-                <a href="" class="p-user__logout">Logout</a>
+                <span class="p-user__name" th:text="${session.admin.username}"></span> 
+                <a href="/logout" class="p-user__logout">Logout</a>
             </div>
         </nav>
 
@@ -69,7 +66,7 @@
                 </div>
 
                 <!-- 検索バー -->
-                <form action="" class="p-search">
+                <form action="/fullTextSearch" class="p-search" method="POST">
                     <input class="p-search__input" type="search" name="search" placeholder="Search">
                 </form>
 
@@ -77,164 +74,29 @@
                 <ul class="p-admin__head">
                     <li>User</li>
                     <li>Name</li>
-                    <li>Dept</li>
-                    <li>Birth</li>
+                    <li>Department</li>
+                    <li>Birthday</li>
                     <li>Email</li>
-                    <li>Number</li>
+                    <li>Tel Number</li>
                 </ul>
 
                 <!-- 社員一覧 -->
                 <div class="p-admin">
-                    <a href="" class="p-admin__body">
-                        <ul class="p-admin__body__item">
-                            <li class="p-admin__body__item__img">
-                                <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo">
-                            </li>
-                            <li>Noe Forger</li>
-                            <li>spy</li>
-                            <li>2000-03-25</li>
-                            <li>noeforger@gmail.com</li>
-                            <li>012-3456-7890</li>
-                        </ul>
-                    </a>
-                    <hr class="p-admin--bar">
-                    <a href="" class="p-admin__body">
-                        <ul class="p-admin__body__item">
-                            <li class="p-admin__body__item__img">
-                                <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo">
-                            </li>
-                            <li>Noe Forger</li>
-                            <li>spy</li>
-                            <li>2000-03-25</li>
-                            <li>noeforger@gmail.com</li>
-                            <li>012-3456-7890</li>
-                        </ul>
-                    </a>
-                    <hr class="p-admin--bar">
-                    <a href="" class="p-admin__body">
-                        <ul class="p-admin__body__item">
-                            <li class="p-admin__body__item__img">
-                                <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo">
-                            </li>
-                            <li>Noe Forger</li>
-                            <li>spy</li>
-                            <li>2000-03-25</li>
-                            <li>noeforger@gmail.com</li>
-                            <li>012-3456-7890</li>
-                        </ul>
-                    </a>
-                    <hr class="p-admin--bar">
-                    <a href="" class="p-admin__body">
-                        <ul class="p-admin__body__item">
-                            <li class="p-admin__body__item__img">
-                                <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo">
-                            </li>
-                            <li>Noe Forger</li>
-                            <li>spy</li>
-                            <li>2000-03-25</li>
-                            <li>noeforger@gmail.com</li>
-                            <li>012-3456-7890</li>
-                        </ul>
-                    </a>
-                    <hr class="p-admin--bar">
-
-                    <a href="" class="p-admin__body">
-                        <ul class="p-admin__body__item">
-                            <li class="p-admin__body__item__img">
-                                <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo">
-                            </li>
-                            <li>Noe Forger</li>
-                            <li>spy</li>
-                            <li>2000-03-25</li>
-                            <li>noeforger@gmail.com</li>
-                            <li>012-3456-7890</li>
-                        </ul>
-                    </a>
-                    <hr class="p-admin--bar">
-
-                    <a href="" class="p-admin__body">
-                        <ul class="p-admin__body__item">
-                            <li class="p-admin__body__item__img">
-                                <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo">
-                            </li>
-                            <li>Noe Forger</li>
-                            <li>spy</li>
-                            <li>2000-03-25</li>
-                            <li>noeforger@gmail.com</li>
-                            <li>012-3456-7890</li>
-                        </ul>
-                    </a>
-                    <hr class="p-admin--bar">
-
-                    <a href="" class="p-admin__body">
-                        <ul class="p-admin__body__item">
-                            <li class="p-admin__body__item__img">
-                                <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo">
-                            </li>
-                            <li>Noe Forger</li>
-                            <li>spy</li>
-                            <li>2000-03-25</li>
-                            <li>noeforger@gmail.com</li>
-                            <li>012-3456-7890</li>
-                        </ul>
-                    </a>
-                    <hr class="p-admin--bar">
-
-                    <a href="" class="p-admin__body">
-                        <ul class="p-admin__body__item">
-                            <li class="p-admin__body__item__img">
-                                <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo">
-                            </li>
-                            <li>Noe Forger</li>
-                            <li>spy</li>
-                            <li>2000-03-25</li>
-                            <li>noeforger@gmail.com</li>
-                            <li>012-3456-7890</li>
-                        </ul>
-                    </a>
-                    <hr class="p-admin--bar">
-
-                    <a href="" class="p-admin__body">
-                        <ul class="p-admin__body__item">
-                            <li class="p-admin__body__item__img">
-                                <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo">
-                            </li>
-                            <li>Noe Forger</li>
-                            <li>spy</li>
-                            <li>2000-03-25</li>
-                            <li>noeforger@gmail.com</li>
-                            <li>012-3456-7890</li>
-                        </ul>
-                    </a>
-                    <hr class="p-admin--bar">
-
-                    <a href="" class="p-admin__body">
-                        <ul class="p-admin__body__item">
-                            <li class="p-admin__body__item__img">
-                                <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo">
-                            </li>
-                            <li>Noe Forger</li>
-                            <li>spy</li>
-                            <li>2000-03-25</li>
-                            <li>noeforger@gmail.com</li>
-                            <li>012-3456-7890</li>
-                        </ul>
-                    </a>
-                    <hr class="p-admin--bar">
-
-                    <a href="" class="p-admin__body">
-                        <ul class="p-admin__body__item">
-                            <li class="p-admin__body__item__img">
-                                <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo">
-                            </li>
-                            <li>Noe Forger</li>
-                            <li>spy</li>
-                            <li>2000-03-25</li>
-                            <li>noeforger@gmail.com</li>
-                            <li>012-3456-7890</li>
-                        </ul>
-                    </a>
-                    <hr class="p-admin--bar">
+                    <div th:each="emp:${allEmp}">
+                        <a href="" class="p-admin__body" th:href="@{/emps/{id}(id=${emp.id})}">
+                            <ul class="p-admin__body__item">
+                                <li class="p-admin__body__item__img">
+                                    <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo" th:src="${emp.PhotosImagePath}">
+                                </li>
+                                <li th:text="${emp.name}" th:id="'name'+${emp.id}"></li>
+                                <li th:text="${emp.dept}"></li>
+                                <li th:text="${emp.birth}"></li>
+                                <li th:text="${emp.email}"></li>
+                                <li th:text="${emp.tel}"></li>
+                            </ul>
+                        </a>
+                        <hr class="p-admin--bar">
+                    </div>
                 </div>
             </div>
         </div>
@@ -243,54 +105,55 @@
     <!-- モーダルウィンドウ -->
     <div class="p-modal js-modal">
         <div class="p-modal__bg js-modal-close"></div>
-        <form action="" class="p-add">
+        <form class="p-add" id="Insertform" enctype="multipart/form-data" method="POST" th:action="@{/addEmp}">
             <div class="p-add__inner">
-                <div class="p-add__inner__ttl">Add</div>
+                <div class="p-add__inner__ttl">Add Member</div>
                 <div class="p-add__inner__list">
-                    <label for="" class="p-add__inner__list">画像アップロード</label>
-                    <input type="file" name="画像" id="">
+                    <label for="" class="p-add__inner__list">Image</label>
+                    <input type="file" name="img" id="imgInp">
                 </div>
                 <div class="p-add__inner__list">
-                    <label for="">名前</label>
-                    <input type="text" placeholder="岩永礼恩">
+                    <label for="">Name</label>
+                    <input type="text" name="name" placeholder="岩永礼恩">
                 </div>
                 <div class="p-add__inner__list">
-                    <label for="">性別</label>
+                    <label for="">Gender</label>
                     <select name="gender">
-                        <option value="">選択してください</option>
+                        <option value="" selected disabled>Select</option>
                         <option value="男">男</option>
                         <option value="女">女</option>
                     </select>
                 </div>
                 <div class="p-add__inner__list">
-                    <label for="">部署</label>
+                    <label for="">Department</label>
                     <select name="dept">
-                        <option value="">選択してください</option>
+                        <option value="" selected disabled>Select</option>
                         <option value="営業">営業部</option>
                         <option value="スパイ">スパイ</option>
                         <option value="調査兵団">調査兵団</option>
                     </select>
                 </div>
                 <div class="p-add__inner__list">
-                    <label for="">生年月日</label>
-                    <input type="date" min="1900-01-01">
+                    <label for="">Birthday</label>
+                    <input type="date" name="birth" min="1900-01-01">
                 </div>
                 <div class="p-add__inner__list">
-                    <label for="">メールアドレス</label>
-                    <input type="text" placeholder="noeforger@gmail.com">
+                    <label for="">Email</label>
+                    <input type="tel" name="email" placeholder="noeforger@gmail.com">
                 </div>
                 <div class="p-add__inner__list">
-                    <label for="">電話番号</label>
-                    <input type="text" placeholder="01234567890">
+                    <label for="">Tel Number</label>
+                    <input type="text" name="tel" placeholder="01234567890">
                 </div>
                 <div class="p-add__inner__list">
-                    <label for="">住所</label>
-                    <textarea name="adress" placeholder="東京都台東区東上野6丁目2-1MPR東上野ビル10階"></textarea>
+                    <label for="">Address</label>
+                    <input name="address" placeholder="東京都台東区東上野6丁目2-1MPR東上野ビル10階">
                 </div>
 
                 <div class="p-add__inner__btns">
-                    <a href="#" class="p-add__inner__btns--back c-btns js-modal-close">戻る</a>
-                    <a href="" class="p-add__inner__btns--add c-btns" >追加</a>
+                    <a href="#" class="p-add__inner__btns--back c-btns js-modal-close">Back</a>
+                    <!-- <a href="" class="p-add__inner__btns--add c-btns" >追加</a> -->
+                    <input class="p-add__inner__btns--add c-btns" type="submit" value="Add Member">
                 </div>
             </div>
         </form>

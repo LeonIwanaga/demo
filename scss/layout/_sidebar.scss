@@ -2,17 +2,11 @@
     position: fixed;
     width: 300px;
     height: 100%;
-    background: $turquoise;
-    background: -webkit-linear-gradient(top left, $turquoise 0%, #53e3a6 100%);
-    background: -moz-linear-gradient(top left, $turquoise 0%, #53e3a6 100%);
-    background: -o-linear-gradient(top left, $turquoise 0%, #53e3a6 100%);
-    background: linear-gradient(to bottom right, $turquoise 0%, #53e3a6 100%);
+    background: $cwhite;
+    border-radius: 0 15px 15px 0;
+    // background: -webkit-linear-gradient(top left, $turquoise 0%, $cwhite 100%);
+    // background: -moz-linear-gradient(top left, $turquoise 0%, $cwhite 100%);
+    // background: -o-linear-gradient(top left, $turquoise 0%, $cwhite 100%);
+    // background: linear-gradient(to bottom right, $turquoise 0%, $cwhite 100%);
     text-align: center;
-
-    &__ttl {
-        height: 90px;
-        line-height: 90px;
-        font-size: 2.4rem;
-        font-weight: bold;
-    }
 }

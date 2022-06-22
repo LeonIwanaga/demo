@@ -14,6 +14,7 @@
 
     &__inner {
         display: inline-block;
+        width: 250px;
         text-align: left;
 
         &__ttl {
@@ -28,6 +29,12 @@
             margin-bottom: 25px;
             font-family: 'Noto Sans JP', sans-serif;
             font-weight: bold;
+
+            &__img {
+                width: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
 
             & label {
                 font-size: 1.2rem;
@@ -68,12 +75,17 @@
             margin-top: 40px;
 
             &--back {
-                border: $prim solid 2px;
+                border: $turquoise solid 2px;
                 margin-bottom: 15px;
             }
 
             &--add {
-                background-color: $prim;
+                background-color: $turquoise;
+                border: none;
+                outline: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
             }
         }
     }
