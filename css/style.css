@@ -405,6 +405,11 @@ p, h1, h2, h3, h4, h5, h6 {
   height: 100%;
 }
 
+.p-login__form__inner__err {
+  margin-bottom: 10px;
+  color: #ff0000;
+}
+
 .p-login__form__inner__input {
   appearance: none;
   outline: 0;

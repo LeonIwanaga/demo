@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>登録</title>
 
@@ -20,11 +20,11 @@
 </head>
 <body>
     <div class="p-login">
-        <form action="" class="p-login__form">
+        <form action="/register" method="post" class="p-login__form">
             <div class="p-login__form__inner">
                 <input type="text" class="p-login__form__inner__input" placeholder="Username">
                 <input type="password" class="p-login__form__inner__input" placeholder="Password">
-                <button type="submit" class="p-login__form__inner__btn">登録</button>
+                <button type="submit" value="Register" class="p-login__form__inner__btn">登録</button>
             </div>
         </form>
     </div>
