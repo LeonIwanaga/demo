@@ -6,6 +6,15 @@
     background-color: $cwhite;
     border-radius: 15px;
 
+    &__left {
+        position: absolute;
+        cursor: pointer;
+        top: 40px;
+        left: 50px;
+        font-size: 3rem;
+        color: $black;
+    }
+
     &__btn {
         position: absolute;
         bottom: 30px;

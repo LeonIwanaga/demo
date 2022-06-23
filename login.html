@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>ログイン</title>
 
@@ -20,12 +20,12 @@
 </head>
 <body>
     <div class="p-login">
-        <form action="" class="p-login__form">
+        <form action="" class="p-login__form" method="post">
             <div class="p-login__form__inner">
-                <span class="p-login__form__inner__err">メールアドレス・パスワードに誤りがあるか、登録されていません。</span>
-                <input type="text" class="p-login__form__inner__input" placeholder="Username">
-                <input type="password" class="p-login__form__inner__input" placeholder="Password">
-                <button type="submit" class="p-login__form__inner__btn">Login</button>
+                <span class="p-login__form__inner__err" th:if="${errMsg !=null}">メールアドレス・パスワードに誤りがあるか、登録されていません。</span>
+                <input type="text" name="username" class="p-login__form__inner__input" placeholder="Username">
+                <input type="password" name="pwd" class="p-login__form__inner__input" placeholder="Password">
+                <button type="submit" class="p-login__form__inner__btn">LOGIN</button>
             </div>
         </form>
     </div>

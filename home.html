@@ -30,7 +30,7 @@
 
             <!-- サイドメニュー項目 -->
             <ul class="p-sidebar">
-                <li class="p-sidebar__list"><a href="/home" class="p-sidebar__list__a">HOME</a></li>
+                <li class="p-sidebar__list"><a href="/emps" class="p-sidebar__list__a">HOME</a></li>
                 <li class="p-sidebar__list"><a href="/register" class="p-sidebar__list__a">REGISTER</a></li>
                 <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">IMPORT</a></li>
                 <li class="p-sidebar__list"><a href="" class="p-sidebar__list__a">EXPORT</a></li>
@@ -104,7 +104,9 @@
 
     <!-- モーダルウィンドウ -->
     <div class="p-modal js-modal">
-        <div class="p-modal__bg js-modal-close"></div>
+        <div class="p-modal__bg js-modal-close">
+            <i class="fa-solid fa-xmark p-modal__bg__cross js-modal-close"></i>
+        </div>
         <form class="p-add" id="Insertform" enctype="multipart/form-data" method="POST" th:action="@{/addEmp}">
             <div class="p-add__inner">
                 <div class="p-add__inner__ttl">Add Member</div>
@@ -114,7 +116,7 @@
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">Name</label>
-                    <input type="text" name="name" placeholder="岩永礼恩">
+                    <input type="text" name="name" placeholder="岩永礼恩" class="input">
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">Gender</label>
@@ -135,19 +137,19 @@
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">Birthday</label>
-                    <input type="date" name="birth" min="1900-01-01">
+                    <input type="date" name="birth" min="1900-01-01" class="input">
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">Email</label>
-                    <input type="tel" name="email" placeholder="noeforger@gmail.com">
+                    <input type="tel" name="email" placeholder="noeforger@gmail.com" class="input">
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">Tel Number</label>
-                    <input type="text" name="tel" placeholder="01234567890">
+                    <input type="text" name="tel" placeholder="01234567890" class="input">
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">Address</label>
-                    <input name="address" placeholder="東京都台東区東上野6丁目2-1MPR東上野ビル10階">
+                    <input name="address" placeholder="東京都台東区東上野6丁目2-1MPR東上野ビル10階" class="input">
                 </div>
 
                 <div class="p-add__inner__btns">

@@ -64,6 +64,9 @@
                 </div>
 
                 <div class="p-detail">
+                    <a href="/emps">
+                        <i class="fa-solid fa-angle-left p-detail__left"></i>
+                    </a>
                     <div class="p-info">
                         <div class="p-info__left">
                             <img src="images/azarashi.png" alt="" class="p-info__left__img" th:src="${emp.PhotosImagePathAtDetail}">
@@ -125,7 +128,9 @@
 
     <!-- モーダルウィンドウ -->
     <div class="p-modal js-modal">
-        <div class="p-modal__bg js-modal-close"></div>
+        <div class="p-modal__bg js-modal-close">
+            <i class="fa-solid fa-xmark p-modal__bg__cross js-modal-close"></i>
+        </div>
         <form class="p-add" method="post" enctype="multipart/form-data" th:action="@{/UpdateEmp/{id}(id=${emp.id})}">
             <div class="p-add__inner">
                 <div class="p-add__inner__ttl">Edit</div>
@@ -136,7 +141,7 @@
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">Name</label>
-                    <input type="text" th:value="${emp.name}" name="name">
+                    <input type="text" th:value="${emp.name}" name="name" class="input">
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">Gender</label>
@@ -155,19 +160,19 @@
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">Birthday</label>
-                    <input type="date" name="birth" id="datefield" th:value="${emp.birth}" min="1900-01-01">
+                    <input type="date" name="birth" id="datefield" th:value="${emp.birth}" min="1900-01-01" class="input">
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">Email</label>
-                    <input type="text" name="email" id="" th:value="${emp.email}">
+                    <input type="text" name="email" id="" th:value="${emp.email}" class="input">
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">Tel Number</label>
-                    <input type="tel" name="tel" id="" th:value="${emp.tel}">
+                    <input type="tel" name="tel" id="" th:value="${emp.tel}" class="input">
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">Address</label>
-                    <input name="address" th:value="${emp.address}">
+                    <input name="address" th:value="${emp.address}" class="input">
                 </div>
 
                 <div class="p-add__inner__btns">
