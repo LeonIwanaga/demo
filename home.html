@@ -25,6 +25,8 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
     <script type="text/javascript" 
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/fetch-jsonp@1.1.3/build/fetch-jsonp.min.js"></script>
 </head>
 <body>
     <div class="l-container">
@@ -121,6 +123,7 @@
                 <div class="p-add__inner__ttl">Add Member</div>
                 <div class="p-add__inner__list">
                     <label for="" class="p-add__inner__list">Image</label>
+                    <img id="blah" src="images/user.png" alt="your image">	
                     <input type="file" name="img" id="imgInp">
                 </div>
                 <div class="p-add__inner__list">
@@ -146,19 +149,28 @@
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">Birthday</label>
-                    <input type="date" name="birth" min="1900-01-01" class="input">
+                    <input type="date" name="birth" id="datefield" min="1900-01-01" max="" class="input">
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">Email</label>
-                    <input type="tel" name="email" placeholder="noeforger@gmail.com" class="input">
+                    <input type="text" name="email" placeholder="noeforger@gmail.com" class="input">
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">Tel Number</label>
                     <input type="text" name="tel" placeholder="01234567890" class="input">
                 </div>
                 <div class="p-add__inner__list">
+                    <label for="">Post Code</label>
+                    <div class="u-flex">
+                        <input id="zip" name="" placeholder="1234567" class="input p-add__inner__list__pc">
+                        <button id="search" type="button" class="p-add__inner__list__pcbtn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-add__inner__list">
                     <label for="">Address</label>
-                    <input name="address" placeholder="東京都台東区東上野6丁目2-1MPR東上野ビル10階" class="input">
+                    <input id="address" value="" name="address" placeholder="東京都台東区東上野6丁目2-1MPR東上野ビル10階" class="input">
                 </div>
 
                 <div class="p-add__inner__btns">
@@ -173,6 +185,7 @@
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/additional-methods.min.js"></script>
     <script src="js/messages_ja.min.js"></script>
+    <script src="js/postcord.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

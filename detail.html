@@ -131,7 +131,8 @@
         <div class="p-modal__bg js-modal-close">
             <i class="fa-solid fa-xmark p-modal__bg__cross js-modal-close"></i>
         </div>
-        <form class="p-add" method="post" enctype="multipart/form-data" th:action="@{/UpdateEmp/{id}(id=${emp.id})}">
+        <form id="editForm" class="p-add" method="post" enctype="multipart/form-data" th:action="@{/UpdateEmp/{id}(id=${emp.id})}">
+            <input type="hidden" id="hiddenId" name="id" th:value="${emp.id}">
             <div class="p-add__inner">
                 <div class="p-add__inner__ttl">Edit</div>
                 <div class="p-add__inner__list">
@@ -171,19 +172,31 @@
                     <input type="tel" name="tel" id="" th:value="${emp.tel}" class="input">
                 </div>
                 <div class="p-add__inner__list">
+                    <label for="">Post Code</label>
+                    <div class="u-flex">
+                        <input id="zip" name="" placeholder="1234567" class="input p-add__inner__list__pc">
+                        <button id="search" type="button" class="p-add__inner__list__pcbtn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-add__inner__list">
                     <label for="">Address</label>
-                    <input name="address" th:value="${emp.address}" class="input">
+                    <input name="address" id="address" th:value="${emp.address}" class="input" value="">
                 </div>
 
                 <div class="p-add__inner__btns">
                     <a href="#" class="p-add__inner__btns--back c-btns js-modal-close">Back</a>
-                    <!-- <a href="" class="p-add__inner__btns--add c-btns" >編集</a> -->
                     <input class="p-add__inner__btns--add c-btns" type="submit" value="Confirm">
                 </div>
             </div>
         </form>
     </div>
 
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/additional-methods.min.js"></script>
+    <script src="../js/messages_ja.min.js"></script>
+    <script src="../js/postcord.js"></script>
     <script src="../js/script.js"></script>
 </body>
 </html>

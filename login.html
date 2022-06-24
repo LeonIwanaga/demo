@@ -20,7 +20,7 @@
 </head>
 <body>
     <div class="p-login">
-        <form action="" class="p-login__form" method="post">
+        <form action="" class="p-login__form" method="post" id="#insertForm">
             <div class="p-login__form__inner">
                 <span class="p-login__form__inner__err" th:if="${errMsg !=null}">メールアドレス・パスワードに誤りがあるか、登録されていません。</span>
                 <input type="text" name="username" class="p-login__form__inner__input" placeholder="Username">
@@ -30,6 +30,9 @@
         </form>
     </div>
 
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/additional-methods.min.js"></script>
+    <script src="js/messages_ja.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
