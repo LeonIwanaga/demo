@@ -69,14 +69,14 @@
                     </a>
                     <div class="p-info">
                         <div class="p-info__left">
-                            <img src="images/azarashi.png" alt="" class="p-info__left__img" th:src="${emp.PhotosImagePathAtDetail}">
+                            <img src="images/wallpaperbetter.jpg" alt="" class="p-info__left__img" th:src="${emp.PhotosImagePathAtDetail}">
                         </div>
                         <div class="p-info__right">
                             <div class="p-info__right__inner">
                                 <p class="p-info__right__inner__tag">
                                     Name
                                 </p>
-                                <p class="p-info__right__inner__txt" th:text="${emp.name}"></p>
+                                <p class="p-info__right__inner__txt" th:text="${emp.name}" id="name"></p>
                             </div>
                             <div class="p-info__inner">
                                 <p class="p-info__right__inner__tag">
@@ -118,7 +118,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="" class="c-delete p-detail__btn">
+                    <a href="" class="c-delete p-detail__btn js-delete" th:href="@{/delete/{id}(id=${emp.id})}">
                         DELETE
                     </a>
                 </div>

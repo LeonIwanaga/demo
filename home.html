@@ -21,6 +21,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"></script>
+    <script type="text/javascript" 
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script type="text/javascript" 
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"></script>
 </head>
 <body>
     <div class="l-container">
@@ -67,7 +71,7 @@
 
                 <!-- 検索バー -->
                 <form action="/fullTextSearch" class="p-search" method="POST">
-                    <input class="p-search__input" type="search" name="search" placeholder="Search">
+                    <input class="p-search__input" type="search" name="keyword" placeholder="Search">
                 </form>
 
                 <!-- 社員一覧の項目 -->
@@ -86,7 +90,7 @@
                         <a href="" class="p-admin__body" th:href="@{/emps/{id}(id=${emp.id})}">
                             <ul class="p-admin__body__item">
                                 <li class="p-admin__body__item__img">
-                                    <img src="images/azarashi.png" alt="" class="p-admin__body__item__img__logo" th:src="${emp.PhotosImagePath}">
+                                    <img src="images/wallpaperbetter.jpg" alt="" class="p-admin__body__item__img__logo" th:src="${emp.PhotosImagePath}">
                                 </li>
                                 <li th:text="${emp.name}" th:id="'name'+${emp.id}"></li>
                                 <li th:text="${emp.dept}"></li>
@@ -96,6 +100,11 @@
                             </ul>
                         </a>
                         <hr class="p-admin--bar">
+                    </div>
+
+                    <!-- 検索結果がなかった場合に表示 -->
+                    <div class="p-admin__btm">
+                        <span class="p-admin__btm__span" th:text="${errorMsg}"></span>
                     </div>
                 </div>
             </div>
@@ -107,7 +116,7 @@
         <div class="p-modal__bg js-modal-close">
             <i class="fa-solid fa-xmark p-modal__bg__cross js-modal-close"></i>
         </div>
-        <form class="p-add" id="Insertform" enctype="multipart/form-data" method="POST" th:action="@{/addEmp}">
+        <form class="p-add" id="insertForm" enctype="multipart/form-data" method="POST" th:action="@{/addEmp}">
             <div class="p-add__inner">
                 <div class="p-add__inner__ttl">Add Member</div>
                 <div class="p-add__inner__list">
@@ -116,7 +125,7 @@
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">Name</label>
-                    <input type="text" name="name" placeholder="岩永礼恩" class="input">
+                    <input type="text" placeholder="岩永礼恩" class="input" name="name">
                 </div>
                 <div class="p-add__inner__list">
                     <label for="">Gender</label>
@@ -161,6 +170,9 @@
         </form>
     </div>
 
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/additional-methods.min.js"></script>
+    <script src="js/messages_ja.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -40,6 +40,10 @@
             font-family: 'Noto Sans JP', sans-serif;
             font-weight: bold;
 
+            & .error {
+                color: $pink;
+            }
+
             &__img {
                 width: 100%;
                 border-radius: 50%;
