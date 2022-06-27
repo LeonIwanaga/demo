@@ -1,6 +1,6 @@
 $(function() {
 
-    //モーダルウインドウ制御
+    //モーダルウインドウ制御(追加、編集)
     $('.js-modal-open').on('click',function(){
         $('.js-modal').fadeIn();
         return false;
@@ -8,6 +8,19 @@ $(function() {
     
     $('.js-modal-close').on('click',function(){
         $('.js-modal').fadeOut();
+        return false;
+    });
+
+//----------------------------------------------------------
+
+    //モーダルウインドウ制御(プレビュー)
+    $('.js-modal_img-open').on('click',function(){
+        $('.js-modal_img').fadeIn();
+        return false;
+    });
+    
+    $('.js-modal_img-close').on('click',function(){
+        $('.js-modal_img').fadeOut();
         return false;
     });
 
@@ -62,10 +75,10 @@ $(function() {
 
     //独自のvalidationを作成
     //電話番号の正規判断
-    jQuery.validator.addMethod("isTel", function(value, element) {
-        var tel = /^0[0-9]{10,10}$/; 
-        return this.optional(element) || (tel.test(value));
-    }, "電話番号を正しく入力してください");
+    // jQuery.validator.addMethod("isTel", function(value, element) {
+    //     var tel = /^0[0-9]{10,10}$/; 
+    //     return this.optional(element) || (tel.test(value));
+    // }, "電話番号を正しく入力してください");
 
     //全角文字正規判断
     // jQuery.validator.addMethod("isAdd", function(value, element) {
@@ -163,7 +176,7 @@ $(function() {
             tel: {
                 required: true,
                 digits: true,
-                isTel: true
+                rangelength: [10, 11]
             },
             address: {
                 required: true,
@@ -205,7 +218,7 @@ $(function() {
             tel: {
                 required: '電話番号を入力してください',
                 digits: '電話番号を正しく入力してください',
-                isTel: '11桁の整数で入力してください'
+                rangelength: '10～11桁の整数で入力してください'
             },
             address: {
                 required: '住所を入力してください',
@@ -244,7 +257,7 @@ $(function() {
             tel: {
                 required: true,
                 digits: true,
-                isTel: true
+                rangelength: [10, 11]
             },
             address: {
                 required: true,
@@ -276,7 +289,7 @@ $(function() {
             tel: {
                 required: '電話番号を入力してください',
                 digits: '電話番号を正しく入力してください',
-                isTel: '11桁の整数で入力してください'
+                rangelength: '10～11桁の整数で入力してください'
             },
             address: {
                 required: '住所を入力してください',

@@ -67,9 +67,19 @@
                 font-family: 'Source Sans Pro', sans-serif;
                 font-size: 1.8rem;
                 transition-duration: 0.25s;
+                margin-bottom: 20px;
 
                 &:hover{
                     background-color: rgb(245, 247, 249);
+                    font-weight: bold;
+                }
+            }
+
+            &__back {
+                color: $black;
+                font-size: 1.4rem;
+
+                &:hover {
                     font-weight: bold;
                 }
             }

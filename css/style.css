@@ -505,10 +505,20 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.8rem;
   transition-duration: 0.25s;
+  margin-bottom: 20px;
 }
 
 .p-login__form__inner__btn:hover {
   background-color: #f5f7f9;
+  font-weight: bold;
+}
+
+.p-login__form__inner__back {
+  color: #000;
+  font-size: 1.4rem;
+}
+
+.p-login__form__inner__back:hover {
   font-weight: bold;
 }
 
@@ -535,6 +545,33 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 3rem;
   color: #fff;
   z-index: 100;
+}
+
+.p-modal__preview {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background: #fff;
+  left: 50%;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 600px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.p-modal__preview__img {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
 }
 
 .p-search {

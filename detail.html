@@ -69,7 +69,7 @@
                     </a>
                     <div class="p-info">
                         <div class="p-info__left">
-                            <img src="images/wallpaperbetter.jpg" alt="" class="p-info__left__img" th:src="${emp.PhotosImagePathAtDetail}">
+                            <img src="images/wallpaperbetter.jpg" alt="" class="p-info__left__img js-modal_img-open" th:src="${emp.PhotosImagePathAtDetail}">
                         </div>
                         <div class="p-info__right">
                             <div class="p-info__right__inner">
@@ -126,7 +126,7 @@
         </div>
     </div>
 
-    <!-- モーダルウィンドウ -->
+    <!-- モーダルウィンドウ js-modal -->
     <div class="p-modal js-modal">
         <div class="p-modal__bg js-modal-close">
             <i class="fa-solid fa-xmark p-modal__bg__cross js-modal-close"></i>
@@ -191,6 +191,16 @@
                 </div>
             </div>
         </form>
+    </div>
+
+    <!-- 画像プレビュー用モーダルウィンドウ js-modal_img -->
+    <div class="p-modal js-modal_img">
+        <div class="p-modal__bg js-modal_img-close">
+            <i class="fa-solid fa-xmark p-modal__bg__cross js-modal_img-close"></i>
+        </div>
+        <div class="p-modal__preview">
+            <img id="blah" class="p-modal__preview__img" src="#" alt="your image" th:src="${emp.PhotosImagePathAtDetail}"/>
+        </div>
     </div>
 
     <script src="../js/jquery.validate.min.js"></script>

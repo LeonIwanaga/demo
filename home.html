@@ -62,7 +62,7 @@
                 <!-- メインコンテンツのヘッダー -->
                 <div class="p-header">
                     <h2 class="p-header__ttl">
-                        Member Admin
+                        Members
                     </h2>
 
                     <!-- js-modal-open クリックでモーダルウィンドウが開く -->
@@ -88,6 +88,216 @@
 
                 <!-- 社員一覧 -->
                 <div class="p-admin">
+                    <div th:each="emp:${allEmp}">
+                        <a href="" class="p-admin__body" th:href="@{/emps/{id}(id=${emp.id})}">
+                            <ul class="p-admin__body__item">
+                                <li class="p-admin__body__item__img">
+                                    <img src="images/wallpaperbetter.jpg" alt="" class="p-admin__body__item__img__logo" th:src="${emp.PhotosImagePath}">
+                                </li>
+                                <li th:text="${emp.name}" th:id="'name'+${emp.id}"></li>
+                                <li th:text="${emp.dept}"></li>
+                                <li th:text="${emp.birth}"></li>
+                                <li th:text="${emp.email}"></li>
+                                <li th:text="${emp.tel}"></li>
+                            </ul>
+                        </a>
+                        <hr class="p-admin--bar">
+                    </div>
+                    <div th:each="emp:${allEmp}">
+                        <a href="" class="p-admin__body" th:href="@{/emps/{id}(id=${emp.id})}">
+                            <ul class="p-admin__body__item">
+                                <li class="p-admin__body__item__img">
+                                    <img src="images/wallpaperbetter.jpg" alt="" class="p-admin__body__item__img__logo" th:src="${emp.PhotosImagePath}">
+                                </li>
+                                <li th:text="${emp.name}" th:id="'name'+${emp.id}"></li>
+                                <li th:text="${emp.dept}"></li>
+                                <li th:text="${emp.birth}"></li>
+                                <li th:text="${emp.email}"></li>
+                                <li th:text="${emp.tel}"></li>
+                            </ul>
+                        </a>
+                        <hr class="p-admin--bar">
+                    </div>
+                    <div th:each="emp:${allEmp}">
+                        <a href="" class="p-admin__body" th:href="@{/emps/{id}(id=${emp.id})}">
+                            <ul class="p-admin__body__item">
+                                <li class="p-admin__body__item__img">
+                                    <img src="images/wallpaperbetter.jpg" alt="" class="p-admin__body__item__img__logo" th:src="${emp.PhotosImagePath}">
+                                </li>
+                                <li th:text="${emp.name}" th:id="'name'+${emp.id}"></li>
+                                <li th:text="${emp.dept}"></li>
+                                <li th:text="${emp.birth}"></li>
+                                <li th:text="${emp.email}"></li>
+                                <li th:text="${emp.tel}"></li>
+                            </ul>
+                        </a>
+                        <hr class="p-admin--bar">
+                    </div>
+                    <div th:each="emp:${allEmp}">
+                        <a href="" class="p-admin__body" th:href="@{/emps/{id}(id=${emp.id})}">
+                            <ul class="p-admin__body__item">
+                                <li class="p-admin__body__item__img">
+                                    <img src="images/wallpaperbetter.jpg" alt="" class="p-admin__body__item__img__logo" th:src="${emp.PhotosImagePath}">
+                                </li>
+                                <li th:text="${emp.name}" th:id="'name'+${emp.id}"></li>
+                                <li th:text="${emp.dept}"></li>
+                                <li th:text="${emp.birth}"></li>
+                                <li th:text="${emp.email}"></li>
+                                <li th:text="${emp.tel}"></li>
+                            </ul>
+                        </a>
+                        <hr class="p-admin--bar">
+                    </div>
+                    <div th:each="emp:${allEmp}">
+                        <a href="" class="p-admin__body" th:href="@{/emps/{id}(id=${emp.id})}">
+                            <ul class="p-admin__body__item">
+                                <li class="p-admin__body__item__img">
+                                    <img src="images/wallpaperbetter.jpg" alt="" class="p-admin__body__item__img__logo" th:src="${emp.PhotosImagePath}">
+                                </li>
+                                <li th:text="${emp.name}" th:id="'name'+${emp.id}"></li>
+                                <li th:text="${emp.dept}"></li>
+                                <li th:text="${emp.birth}"></li>
+                                <li th:text="${emp.email}"></li>
+                                <li th:text="${emp.tel}"></li>
+                            </ul>
+                        </a>
+                        <hr class="p-admin--bar">
+                    </div>
+                    <div th:each="emp:${allEmp}">
+                        <a href="" class="p-admin__body" th:href="@{/emps/{id}(id=${emp.id})}">
+                            <ul class="p-admin__body__item">
+                                <li class="p-admin__body__item__img">
+                                    <img src="images/wallpaperbetter.jpg" alt="" class="p-admin__body__item__img__logo" th:src="${emp.PhotosImagePath}">
+                                </li>
+                                <li th:text="${emp.name}" th:id="'name'+${emp.id}"></li>
+                                <li th:text="${emp.dept}"></li>
+                                <li th:text="${emp.birth}"></li>
+                                <li th:text="${emp.email}"></li>
+                                <li th:text="${emp.tel}"></li>
+                            </ul>
+                        </a>
+                        <hr class="p-admin--bar">
+                    </div>
+                    <div th:each="emp:${allEmp}">
+                        <a href="" class="p-admin__body" th:href="@{/emps/{id}(id=${emp.id})}">
+                            <ul class="p-admin__body__item">
+                                <li class="p-admin__body__item__img">
+                                    <img src="images/wallpaperbetter.jpg" alt="" class="p-admin__body__item__img__logo" th:src="${emp.PhotosImagePath}">
+                                </li>
+                                <li th:text="${emp.name}" th:id="'name'+${emp.id}"></li>
+                                <li th:text="${emp.dept}"></li>
+                                <li th:text="${emp.birth}"></li>
+                                <li th:text="${emp.email}"></li>
+                                <li th:text="${emp.tel}"></li>
+                            </ul>
+                        </a>
+                        <hr class="p-admin--bar">
+                    </div>
+                    <div th:each="emp:${allEmp}">
+                        <a href="" class="p-admin__body" th:href="@{/emps/{id}(id=${emp.id})}">
+                            <ul class="p-admin__body__item">
+                                <li class="p-admin__body__item__img">
+                                    <img src="images/wallpaperbetter.jpg" alt="" class="p-admin__body__item__img__logo" th:src="${emp.PhotosImagePath}">
+                                </li>
+                                <li th:text="${emp.name}" th:id="'name'+${emp.id}"></li>
+                                <li th:text="${emp.dept}"></li>
+                                <li th:text="${emp.birth}"></li>
+                                <li th:text="${emp.email}"></li>
+                                <li th:text="${emp.tel}"></li>
+                            </ul>
+                        </a>
+                        <hr class="p-admin--bar">
+                    </div>
+                    <div th:each="emp:${allEmp}">
+                        <a href="" class="p-admin__body" th:href="@{/emps/{id}(id=${emp.id})}">
+                            <ul class="p-admin__body__item">
+                                <li class="p-admin__body__item__img">
+                                    <img src="images/wallpaperbetter.jpg" alt="" class="p-admin__body__item__img__logo" th:src="${emp.PhotosImagePath}">
+                                </li>
+                                <li th:text="${emp.name}" th:id="'name'+${emp.id}"></li>
+                                <li th:text="${emp.dept}"></li>
+                                <li th:text="${emp.birth}"></li>
+                                <li th:text="${emp.email}"></li>
+                                <li th:text="${emp.tel}"></li>
+                            </ul>
+                        </a>
+                        <hr class="p-admin--bar">
+                    </div>
+                    <div th:each="emp:${allEmp}">
+                        <a href="" class="p-admin__body" th:href="@{/emps/{id}(id=${emp.id})}">
+                            <ul class="p-admin__body__item">
+                                <li class="p-admin__body__item__img">
+                                    <img src="images/wallpaperbetter.jpg" alt="" class="p-admin__body__item__img__logo" th:src="${emp.PhotosImagePath}">
+                                </li>
+                                <li th:text="${emp.name}" th:id="'name'+${emp.id}"></li>
+                                <li th:text="${emp.dept}"></li>
+                                <li th:text="${emp.birth}"></li>
+                                <li th:text="${emp.email}"></li>
+                                <li th:text="${emp.tel}"></li>
+                            </ul>
+                        </a>
+                        <hr class="p-admin--bar">
+                    </div>
+                    <div th:each="emp:${allEmp}">
+                        <a href="" class="p-admin__body" th:href="@{/emps/{id}(id=${emp.id})}">
+                            <ul class="p-admin__body__item">
+                                <li class="p-admin__body__item__img">
+                                    <img src="images/wallpaperbetter.jpg" alt="" class="p-admin__body__item__img__logo" th:src="${emp.PhotosImagePath}">
+                                </li>
+                                <li th:text="${emp.name}" th:id="'name'+${emp.id}"></li>
+                                <li th:text="${emp.dept}"></li>
+                                <li th:text="${emp.birth}"></li>
+                                <li th:text="${emp.email}"></li>
+                                <li th:text="${emp.tel}"></li>
+                            </ul>
+                        </a>
+                        <hr class="p-admin--bar">
+                    </div>
+                    <div th:each="emp:${allEmp}">
+                        <a href="" class="p-admin__body" th:href="@{/emps/{id}(id=${emp.id})}">
+                            <ul class="p-admin__body__item">
+                                <li class="p-admin__body__item__img">
+                                    <img src="images/wallpaperbetter.jpg" alt="" class="p-admin__body__item__img__logo" th:src="${emp.PhotosImagePath}">
+                                </li>
+                                <li th:text="${emp.name}" th:id="'name'+${emp.id}"></li>
+                                <li th:text="${emp.dept}"></li>
+                                <li th:text="${emp.birth}"></li>
+                                <li th:text="${emp.email}"></li>
+                                <li th:text="${emp.tel}"></li>
+                            </ul>
+                        </a>
+                        <hr class="p-admin--bar">
+                    </div>
+                    <div th:each="emp:${allEmp}">
+                        <a href="" class="p-admin__body" th:href="@{/emps/{id}(id=${emp.id})}">
+                            <ul class="p-admin__body__item">
+                                <li class="p-admin__body__item__img">
+                                    <img src="images/wallpaperbetter.jpg" alt="" class="p-admin__body__item__img__logo" th:src="${emp.PhotosImagePath}">
+                                </li>
+                                <li th:text="${emp.name}" th:id="'name'+${emp.id}"></li>
+                                <li th:text="${emp.dept}"></li>
+                                <li th:text="${emp.birth}"></li>
+                                <li th:text="${emp.email}"></li>
+                                <li th:text="${emp.tel}"></li>
+                            </ul>
+                        </a>
+                        <hr class="p-admin--bar">
+                    </div>
+                    <div th:each="emp:${allEmp}">
+                        <a href="" class="p-admin__body" th:href="@{/emps/{id}(id=${emp.id})}">
+                            <ul class="p-admin__body__item">
+                                <li class="p-admin__body__item__img">
+                                    <img src="images/wallpaperbetter.jpg" alt="" class="p-admin__body__item__img__logo" th:src="${emp.PhotosImagePath}">
+                                </li>
+                                <li th:text="${emp.name}" th:id="'name'+${emp.id}"></li>
+                                <li th:text="${emp.dept}"></li>
+                                <li th:text="${emp.birth}"></li>
+                                <li th:text="${emp.email}"></li>
+                                <li th:text="${emp.tel}"></li>
+                            </ul>
+                        </a>
+                        <hr class="p-admin--bar">
+                    </div>
                     <div th:each="emp:${allEmp}">
                         <a href="" class="p-admin__body" th:href="@{/emps/{id}(id=${emp.id})}">
                             <ul class="p-admin__body__item">

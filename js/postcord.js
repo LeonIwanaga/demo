@@ -15,9 +15,10 @@ $(function () {
             if (data.results) {
                 var result = data.results[0];
                 $('#address').val(result.address1 + result.address2 + result.address3);
-            } else {
-                $('#address').val('該当する住所が存在しません。')
-            }
+            } 
+            // else {
+            //     $('#address').val('該当する住所が存在しません。')
+            // }
         })
     });
 });
