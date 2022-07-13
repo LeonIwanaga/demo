@@ -83,6 +83,25 @@
                     font-weight: bold;
                 }
             }
+
+            &__forget {
+                text-decoration: underline;
+                font-size: 1.4rem;
+                color: $black;
+                font-family: 'Noto Sans JP', sans-serif;
+            }
+
+            &__text {
+                margin-bottom: 10px;
+                font-size: 1.4rem;
+                color: $cwhite;
+            }
+
+            &__pass {
+                margin-bottom: 10px;
+                font-size: 1.4rem;
+                color: $cwhite;
+            }
         }
     }
 }

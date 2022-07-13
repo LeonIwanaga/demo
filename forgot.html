@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>ログイン</title>
+    <title>パスワードを変更</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,13 +20,11 @@
 </head>
 <body>
     <div class="p-login">
-        <form action="/login" class="p-login__form" method="post" id="#insertForm">
+        <form action="" class="p-login__form" method="post" id="#insertForm">
             <div class="p-login__form__inner">
-                <span class="p-login__form__inner__err" th:if="${errMsg !=null}">メールアドレス・パスワードに誤りがあるか、登録されていません。</span>
-                <input type="text" name="username" class="p-login__form__inner__input" placeholder="Username">
-                <input type="password" name="pwd" class="p-login__form__inner__input" placeholder="Password">
-                <button type="submit" class="p-login__form__inner__btn">LOGIN</button>
-                <!-- <a href="" class="p-login__form__inner__forget">If you forgot your password, click here</a> -->
+                <p class="p-login__form__inner__text">パスワードを変更したいアカウントのメールアドレスを入力してください</p>
+                <input type="text" name="username" class="p-login__form__inner__input">
+                <button type="submit" class="p-login__form__inner__btn">SUBMIT</button>
             </div>
         </form>
     </div>
