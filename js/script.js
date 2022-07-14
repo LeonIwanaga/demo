@@ -139,24 +139,42 @@ $(function() {
 //----------------------------------------------------------   
 
     //validation
-    //追加時
-    $('#insertForm').validate({
+    //管理者追加時
+    $('#registerForm').validate({
         rules: {
-            //ログイン画面
             username: {
                 required: true,
-                email: true 
+                email: true
             },
             pwd: {
                 required: true,
                 rangelength: [8, 16]
+            }
+        },
+        messages: {
+            username: {
+                required: '正しく入力してください',
+                email: 'メールアドレス形式で入力してください'
             },
-            //追加画面
+            pwd: {
+                required: 'パスワードを入力してください',
+                rangelength: '8文字以上16文字以下で入力してください'
+            },
+        }
+    });
+    
+//----------------------------------------------------------   
+
+    //validation
+    //追加時
+    $('#insertForm').validate({
+        rules: {
             img: {
                 extension: 'jpg|png' 
             },
             name: {
-                required: true
+                required: true,
+                maxlength: 60
             },
             gender: {
                 required: true
@@ -184,21 +202,12 @@ $(function() {
             },
         },
         messages: {
-            //ログイン画面
-            username: {
-                required: '正しく入力してください',
-                email: 'メールアドレス形式で入力してください'
-            },
-            pwd: {
-                required: 'パスワードを入力してください',
-                rangelength: '8文字以上16文字以下で入力してください'
-            },
-            //追加画面
             img: {
                 extension: 'jpg/pngの画像をアップロードしてください'
             },
             name: {
-                required: 'お名前を入力してください'
+                required: 'お名前を入力してください',
+                maxlength: '60文字以下で入力してください'
             },
             gender: {
                 required: '選択してください'
@@ -237,7 +246,8 @@ $(function() {
                 extension: 'jpg|png' 
             },
             name: {
-                required: true
+                required: true,
+                maxlength: 60
             },
             gender: {
                 required: true
@@ -269,7 +279,8 @@ $(function() {
                 extension: 'jpg/pngの画像をアップロードしてください'
             },
             name: {
-                required: 'お名前を入力してください'
+                required: 'お名前を入力してください',
+                maxlength: '60文字以下で入力して下さい'
             },
             gender: {
                 required: '選択してください'
